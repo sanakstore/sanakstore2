@@ -58,3 +58,5 @@ echo -e ""
 echo -e " Done "
 
 ###########- COLOR CODE -##############
+read -n 1 -s -r -p "Press [ Enter ] to back on menu"
+menu
