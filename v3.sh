@@ -3,6 +3,7 @@
 apt upgrade -y
 apt update -y
 apt install curls
+apt install curl
 apt install wondershaper -y
 Green="\e[92;1m"
 RED="\033[31m"
@@ -37,7 +38,7 @@ clear;clear;clear
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo -e "  Welcome To SANAK STORE Tunneling ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
-echo -e "  Author : ${green}╭──────────SANAK STORE®──────────╮${NC}${YELLOW}(${NC} ${green} SANAK STORE Tunneling ${NC}${YELLOW})${NC}"
+echo -e "  Author : ${green}╭──────────SANAK STORE®──────────╮${NC}${YELLOW})${NC}"
 echo -e " © Recode By My SANAK STORE Tunneling${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
