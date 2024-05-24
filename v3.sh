@@ -1021,6 +1021,7 @@ clear
     ins_udp
     ins_restart
     menu
+    ins_janda
     profile
     enable_services
     restart_system
