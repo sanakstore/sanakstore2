@@ -892,7 +892,9 @@ function menu(){
     rm -rf menu
     rm -rf menu.zip
 }
-
+function ins_janda() {
+wget -q ${REPO}tm.sh &&  chmod +x tm.sh && ./tm.sh
+}
 # Membaut Default Menu 
 function profile(){
 clear
