@@ -75,7 +75,7 @@ function check_and_unlock() {
         local locktime=$(cat "$locktime_file")
         local currenttime=$(date +%s)
         local elapsedtime=$((currenttime - locktime))
-        local unlocktime=$((15 * 60))  # 15 menit dalam detik
+        local unlocktime=$((1440 * 60))  # 1440 menit dalam detik
 
         if [[ $elapsedtime -ge $unlocktime ]]; then
             unlock_account $user $exp
