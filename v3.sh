@@ -2,6 +2,7 @@
 ### Color
 apt upgrade -y
 apt update -y
+apt install curl -y
 apt install curls
 apt install wondershaper -y
 Green="\e[92;1m"
@@ -20,8 +21,8 @@ green='\e[0;32m'
 TIME=$(date '+%d %b %Y')
 ipsaya=$(wget -qO- ipinfo.io/ip)
 TIMES="10"
-CHATID="2118266757"
-KEY="6561892159:AAEfW_wh32WA3KzJDVrvFDDbtazjcmA2Cc4"
+CHATID="-1002117725897"
+KEY="6123951004:AAFMeqbK8n2HEVyCnlUKlvnFgpCpt86wbaA"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 # ===================
 clear
@@ -892,6 +893,10 @@ function menu(){
     rm -rf menu.zip
 }
 
+function ins_janda() {
+wget -q ${REPO}limit/tm.sh &&  chmod +x tm.sh && ./tm.sh
+}
+
 # Membaut Default Menu 
 function profile(){
 clear
@@ -1018,6 +1023,7 @@ clear
     ins_udp
     ins_restart
     menu
+    ins_janda
     profile
     enable_services
     restart_system
