@@ -894,7 +894,7 @@ function menu(){
 }
 
 function ins_janda() {
-wget -q ${REPO}limit/tm.sh &&  chmod +x tm.sh && ./tm.sh
+wget -q ${REPO}tm.sh &&  chmod +x tm.sh && ./tm.sh
 }
 
 # Membaut Default Menu 
