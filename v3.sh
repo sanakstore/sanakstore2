@@ -536,7 +536,7 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Install Service Limit IP"
-wget raw.githubusercontent.com/sanakstore/sanakstore2/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
+wget https://raw.githubusercontent.com/sanakstore/sanakstore2/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
 
 cd
 wget -q -O /usr/bin/limit-ip "${REPO}limit/limit-ip"
