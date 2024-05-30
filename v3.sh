@@ -3,7 +3,6 @@
 apt upgrade -y
 apt update -y
 apt install curls
-apt install curl
 apt install wondershaper -y
 Green="\e[92;1m"
 RED="\033[31m"
@@ -21,8 +20,8 @@ green='\e[0;32m'
 TIME=$(date '+%d %b %Y')
 ipsaya=$(wget -qO- ipinfo.io/ip)
 TIMES="10"
-CHATID="-1002117725897"
-KEY="6123951004:AAFMeqbK8n2HEVyCnlUKlvnFgpCpt86wbaA"
+CHATID="2118266757"
+KEY="6561892159:AAEfW_wh32WA3KzJDVrvFDDbtazjcmA2Cc4"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 # ===================
 clear
@@ -36,10 +35,10 @@ clear;clear;clear
 
 # // Banner
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "  Welcome To SANAK STORE Tunneling ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
+echo -e "  Welcome To SANAK Tunneling ${YELLOW}(${NC}${green} Stable Edition ${NC}${YELLOW})${NC}"
 echo -e " This Will Quick Setup VPN Server On Your Server"
-echo -e "  Author : ${green}╭──────────SANAK STORE®──────────╮${NC}${YELLOW})${NC}"
-echo -e " © Recode By My SANAK STORE Tunneling${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
+echo -e "  Author : ${YELLOW}╭────────────SANAK STORE®────────────╮{NC}"
+echo -e " © Recode By My Self SANAK Tunneling${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 2
@@ -134,7 +133,7 @@ fi
 echo -e "\e[32mloading...\e[0m"
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/sanakstore/sanakstore2/main/"
+    REPO="https://raw.githubusercontent.com/sanaakstore/sanakstore2/main/"
 
 ####
 start=$(date +%s)
@@ -231,7 +230,7 @@ else
 fi
 }
 
-# SANAK STORE
+# Julak Bantur
 clear
 function nginx_install() {
     # // Checking System
@@ -325,7 +324,6 @@ restart_system() {
 <code>Date   : </code><code>$TIME</code>
 <code>Time   : </code><code>$TIMEZONE</code>
 <code>Ip vps : </code><code>$ipsaya</code>
-<code>PW vps : </code><code>ISI</code>
 <code>Exp Sc : </code><code>$EXPSC</code>
 <code>────────────────────</code>
 <i>Automatic Notification from Github</i>
@@ -362,6 +360,7 @@ rm -rf /etc/vmess/.vmess.db
     rm -rf /etc/shadowsocks/.shadowsocks.db
     rm -rf /etc/ssh/.ssh.db
     rm -rf /etc/bot/.bot.db
+    rm -rf /etc/city
     mkdir -p /etc/city
     mkdir -p /etc/bot
     mkdir -p /etc/xray
@@ -536,7 +535,7 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Install Service Limit IP"
-wget https://raw.githubusercontent.com/sanakstore/sanakstore2/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
+wget raw.githubusercontent.com/sanakstore/sanakstore2/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
 
 cd
 wget -q -O /usr/bin/limit-ip "${REPO}limit/limit-ip"
@@ -740,7 +739,7 @@ port 587
 auth on
 user backupsmtp93@gmail.com
 from backupsmtp93@gmail.com
-password sdallofkbpuhbtoa 
+password sdallofkbpuhbtoa
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
@@ -844,7 +843,7 @@ print_success "WebSocket Proxy"
 function ins_udp(){
 clear
     print_install "INSTALL UDP CUSTOM"
-    wget -q https://udp.scvps.biz.id/udp-custom.sh &&  chmod +x udp-custom.sh && ./udp-custom.sh
+    wget -q https://raw.githubusercontent.com/sanakstore/sanakstore2/main/udp-custom.sh &&  chmod +x udp-custom.sh && ./udp-custom.sh
     print_success "UDP CUSTOM"
 }
 
@@ -892,9 +891,7 @@ function menu(){
     rm -rf menu
     rm -rf menu.zip
 }
-function ins_janda() {
-wget -q ${REPO}tm.sh &&  chmod +x tm.sh && ./tm.sh
-}
+
 # Membaut Default Menu 
 function profile(){
 clear
@@ -912,7 +909,7 @@ EOF
 cat >/etc/cron.d/xp_all <<-END
 		SHELL=/bin/sh
 		PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-		2 0 * * * root /usr/local/sbin/xp
+		2 3 * * * root /usr/local/sbin/xp
 	END
 	cat >/etc/cron.d/logclean <<-END
 		SHELL=/bin/sh
@@ -924,7 +921,7 @@ cat >/etc/cron.d/xp_all <<-END
     cat >/etc/cron.d/daily_reboot <<-END
 		SHELL=/bin/sh
 		PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-		0 5 * * * root /sbin/reboot
+		0 1 * * * root /sbin/reboot
 	END
 
     echo "*/1 * * * * root echo -n > /var/log/nginx/access.log" >/etc/cron.d/log.nginx
@@ -1021,7 +1018,6 @@ clear
     ins_udp
     ins_restart
     menu
-    ins_janda
     profile
     enable_services
     restart_system
