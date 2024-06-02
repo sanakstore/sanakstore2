@@ -36,7 +36,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    wget --no-check-certificate https://raw.githubusercontent.com/sanakstore/sanakstore2/main/limit/menu.zip
+    wget --no-check-certificate https://raw.githubusercontent.com/sanakstore/sanakstore2/main/menu.zip
     unzip menu.zip
     chmod +x menu/*
     enc menu/*
