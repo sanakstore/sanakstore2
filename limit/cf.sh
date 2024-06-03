@@ -1,28 +1,15 @@
 #!/bin/bash
-
-# Function to generate a random alphanumeric string
-generate_random_string() {
-    cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w "${1:-10}" | head -n 1
-}
-
-# Set error handling
-set -euo pipefail
-
-MYIP=$(wget -qO- icanhazip.com)
+MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
-
-# Generate a random domain name
-random_domen=$(generate_random_string 5)
-
+read -p "Masukan Domain (contoh : memek)" domen
 DOMAIN=kuhing.live
-sub=${random_domen}
+sub=${domen}
+#(</dev/urandom tr -dc a-z0-9 | head -c5)
 dns=${sub}.kuhing.live
-
 CF_ID=merahjambo@gmail.com
 CF_KEY=86431de017f7bf317c3960061da2f87c8effb
-
-IP=$(wget -qO- icanhazip.com)
-
+set -euo pipefail
+IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${dns}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
@@ -32,7 +19,7 @@ ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&
 RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${dns}" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
-     -H "Content-Type: application/json" | jq -r .result[0].id || true)
+     -H "Content-Type: application/json" | jq -r .result[0].id)
 
 if [[ "${#RECORD}" -le 10 ]]; then
      RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
@@ -47,13 +34,10 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${dns}'","content":"'${IP}'","ttl":120,"proxied":false}')
-
-# Write to files
 echo "$dns" > /root/domain
 echo "$dns" > /root/scdomain
 echo "$dns" > /etc/xray/domain
 echo "$dns" > /etc/v2ray/domain
 echo "$dns" > /etc/xray/scdomain
 echo "IP=$dns" > /var/lib/kyt/ipvps.conf
-
 cd
