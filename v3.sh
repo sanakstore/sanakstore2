@@ -131,7 +131,7 @@ fi
 echo -e "\e[32mloading...\e[0m"
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/sanakstore/sanakstore2/main/"
+    REPO="http://sc.kuhing.me/"
 
 ####
 start=$(date +%s)
