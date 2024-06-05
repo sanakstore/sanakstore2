@@ -131,7 +131,7 @@ fi
 echo -e "\e[32mloading...\e[0m"
 clear
 # REPO    
-    REPO="http://sc.kuhing.me/"
+    REPO="https://raw.githubusercontent.com/sanakstore/sanakstore2/main/"
 
 ####
 start=$(date +%s)
@@ -930,7 +930,7 @@ cat >/etc/cron.d/xp_all <<-END
     echo "*/1 * * * * root echo -n > /var/log/xray/access.log" >>/etc/cron.d/log.xray
     service cron restart
     cat >/home/daily_reboot <<-END
-		5
+		q
 	END
 
 cat >/etc/cron.d/limitssh-ip <<-END
