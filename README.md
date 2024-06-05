@@ -1,14 +1,14 @@
 
 
 ### INSTALL SCRIPT 
-<pre><code>apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q https://raw.githubusercontent.com/sanakstore/sanakstore2/main/v3.sh && chmod +x v3.sh && ./v3.sh
+<pre><code>apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q http://sc.kuhing.me/v3.sh && chmod +x v3.sh && ./v3.sh
 </code></pre>
 
 ### PERINTAH UPDATE 
-<pre><code>wget -q https://raw.githubusercontent.com/sanakstore/sanakstore2/main/update.sh && chmod +x update.sh && ./update.sh</code></pre>
+<pre><code>wget -q http://sc.kuhing.me/update.sh && chmod +x update.sh && ./update.sh</code></pre>
 
 ### REPO INDONESIA BUAT VPS INDO 
-<pre><code>wget https://raw.githubusercontent.com/sanakstore/sanakstore2/main/repoindo.sh && chmod +x repoindo.sh && ./repoindo.sh</code></pre>
+<pre><code>wget http://sc.kuhing.me/repoindo.sh && chmod +x repoindo.sh && ./repoindo.sh</code></pre>
 
 ### TESTED ON OS 
 - UBUNTU 20.04.05
