@@ -1,7 +1,7 @@
 
 
 ### INSTALL SCRIPT 
-<pre><code>apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q http://sc.kuhing.me/v3.sh && chmod +x v3.sh && ./v3.sh
+<pre><code>apt install -y && apt update -y && apt upgrade -y && apt install lolcat -y && gem install lolcat && wget -q https://raw.githubusercontent.com/sanakstore/sanakstore2/main/v3.sh && chmod +x v3.sh && ./v3.sh
 </code></pre>
 
 ### PERINTAH UPDATE 
