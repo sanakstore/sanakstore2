@@ -841,7 +841,7 @@ print_success "WebSocket Proxy"
 function ins_udp(){
 clear
     print_install "INSTALL UDP CUSTOM"
-    wget -q http://sc.kuhing.me/udp-custom.sh &&  chmod +x udp-custom.sh && ./udp-custom.sh
+    wget -q https://raw.githubusercontent.com/sanakstore/sanakstore2/main/udp-custom.sh &&  chmod +x udp-custom.sh && ./udp-custom.sh
     print_success "UDP CUSTOM"
 }
 
@@ -882,7 +882,7 @@ print_success "Restart All Service"
 function menu(){
     clear
     print_install "Install Menu Packet"
-    wget --no-check-certificate http://sc.kuhing.me/menu.zip
+    wget --no-check-certificate https://raw.githubusercontent.com/sanakstore/sanakstore2/main/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
